@@ -1,0 +1,3 @@
+Mistral is a high-performance open-source language model designed for efficiency and accuracy. Developed as an alternative to larger models, it offers strong reasoning abilities while requiring fewer resources.
+
+Mistral can be used in a variety of applications, such as text summarization, question answering, and conversational AI. When integrated with Ollama, Mistral provides a locally hosted, privacy-focused AI solution that doesn't rely on cloud-based services.

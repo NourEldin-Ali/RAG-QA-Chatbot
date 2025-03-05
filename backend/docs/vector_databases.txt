@@ -1,0 +1,5 @@
+Vector databases store high-dimensional numerical representations of data, known as embeddings. These embeddings allow efficient similarity searches based on vector distances rather than keyword matching.
+
+Popular vector databases include Weaviate, Milvus, Qdrant, and ChromaDB. They are widely used for AI applications, such as semantic search, recommendation systems, and Retrieval-Augmented Generation (RAG). 
+
+ChromaDB, in particular, is lightweight and optimized for storing and retrieving text embeddings, making it a popular choice for integrating with LangChain and Ollama.

@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: always
+    ports:
+      - "11433:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    mem_limit: 8g  # Increase memory to 8GB
+    mem_reservation: 8g  # Reserve at least 4GB
+    deploy:
+      resources:
+        limits:
+          memory: 8g
+        reservations:
+          memory: 8g
+    environment:
+      - OLLAMA_NUM_THREADS=8  # Adjust CPU threading for better performance
+    # entrypoint: >
+    #   sh -c "ollama pull mistral && ollama serve"
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: chromadb
+    restart: always
+    ports:
+      - "8000:8000"
+    # environment:
+    #   - CHROMA_DB_IMPL=duckdb
+    #   - ALLOW_RESET=TRUE
+    #   - IS_PERSISTENT=TRUE
+    volumes:
+      - chromadb_data:/chroma
+
+volumes:
+  ollama_data: {} 
+  chromadb_data: {}
