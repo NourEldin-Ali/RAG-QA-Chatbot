@@ -69,7 +69,7 @@ llm_controller = LLMController(llm_model=llm_model, vector_db=vector_db, k=2)
 
 # %%
 # Ask user for input query
-query = "You should anser me event you dont have context, what is the docker?"
+query = "what is the docker?"
 
 # Get response
 response = llm_controller.get_responce(query)
